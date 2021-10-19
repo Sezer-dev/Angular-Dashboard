@@ -1,0 +1,52 @@
+<div class="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h1>Add New Location</h1>
+      <span (click)="closeModal()">X</span>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div>
+          <label for="">Branch Name</label>
+          <input type="text" placeholder="the name of the branch">
+        </div>
+
+        <div>
+          <label for="">Logo</label>
+          <input type="text" placeholder="logo file upload" (click)="fileUpload()">
+          <input type="file" id="fileInput" #fileInput accept="image/png, image/jpg,image/svg, image/jpeg">
+
+        </div>
+
+        <div>
+          <label for="">Licence Count</label>
+          <input type="text" placeholder="the number of licenses">
+        </div>
+
+        <div>
+          <label for="">Date</label>
+          <input type="text" disabled [value]="date">
+        </div>
+
+        <div class="checkbox-container">
+          <div>
+            <input id="checkbox-exam" type="checkbox">
+            <label for="checkbox-exam">Exams</label>
+          </div>
+          <div>
+            <input id="checkbox-monitoring" type="checkbox">
+            <label for="checkbox-monitoring">Monitoring</label>
+          </div>
+          <div>
+            <input id="checkbox-library" type="checkbox">
+            <label for="checkbox-library">Application Library</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button (click)="closeModal()">Cancel</button>
+      <button>Add</button>
+    </div>
+  </div>
+</div>

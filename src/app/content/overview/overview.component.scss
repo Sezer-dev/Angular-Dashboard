@@ -1,0 +1,18 @@
+@import "../../../assets/scss/variables.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+
+  .left-wrapper {
+    height: 100%;
+    width: 600px;
+    margin-right: 20px;
+  }
+
+  .right-wrapper {
+    height: 100%;
+    width: 531px;
+  }
+
+}

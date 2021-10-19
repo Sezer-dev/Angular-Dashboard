@@ -1,0 +1,58 @@
+<div class="module-usage">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">
+                    Module Usage
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="./assets/images/exams.svg">
+                </td>
+                <td>
+                    <div class="bar">
+                        <div class="filled-bar filled-bar-exam"
+                            [ngStyle]="{'width': (reducedData?.exams*100 / usageData?.exams) * 100 + '%' }">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    {{((reducedData?.exams*100 / usageData?.exams) * 100).toFixed()}}%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="./assets/images/monitoring.svg">
+                </td>
+                <td>
+                    <div class="bar">
+                        <div class="filled-bar filled-bar-monitoring"
+                            [ngStyle]="{'width': (reducedData?.monitoring*100 / usageData?.monitoring) * 100 + '%' }">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    {{ ((reducedData?.monitoring*100 / usageData?.monitoring) * 100).toFixed()}}%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="./assets/images/application-library.svg">
+                </td>
+                <td>
+                    <div class="bar">
+                        <div class="filled-bar filled-bar-application-library"
+                            [ngStyle]="{'width': (reducedData?.applicationLibrary*100 / usageData?.applicationLibrary) * 100 + '%' }">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    {{((reducedData?.applicationLibrary*100 / usageData?.applicationLibrary) * 100).toFixed()}}%
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

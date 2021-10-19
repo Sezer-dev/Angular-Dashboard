@@ -1,0 +1,34 @@
+<div class="container">
+
+  <div class="administrators">
+    <div class="title">Administrators</div>
+    <div class="admin-list">
+      <ul>
+        <ng-template [ngIf]="administrators">
+          <li *ngFor="let admin of administrators">
+            <img src="{{admin.image}}" alt="">
+            <p>{{admin.name.split(' ')[0]}}</p>
+          </li>
+        </ng-template>
+        <img src="./assets/images/right-arrow.svg" alt="right-arrow">
+      </ul>
+    </div>
+    <form>
+      <input type="email" placeholder="Enter email">
+      <button>
+        Invite
+        <img src="../../../../../assets/images/right-icon.svg" alt="invite-icon">
+      </button>
+    </form>
+  </div>
+
+  <div class="contact">
+    <div>
+      <h6>
+        Contact <br> Support
+        <span></span>
+      </h6>
+    </div>
+    <img src="../../../../../assets/images/contact-cloud-icon.svg" alt="cloud-icon">
+  </div>
+</div>

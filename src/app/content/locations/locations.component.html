@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Locations
+          </th>
+          <th>
+            Licences
+          </th>
+          <th>
+            Enrollment date
+          </th>
+          <th>
+            Products
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of locations">
+          <td>
+            <div><img [src]=row.image></div><span>{{row.name}}</span>
+          </td>
+          <td>{{row.licences}}</td>
+          <td>{{row.enrollmentDate}}</td>
+          <td>
+            <div>
+              <img src="./assets/images/monitoring.svg" *ngIf="row.products.monitoring">
+              <img src="./assets/images/exams.svg" *ngIf="row.products.exams">
+              <img src="./assets/images/application-library.svg" *ngIf="row.products.applicationLibrary">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

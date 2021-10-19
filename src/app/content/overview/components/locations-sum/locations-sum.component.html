@@ -1,0 +1,43 @@
+<div class="locations">
+  <div class="title">
+    <p>Locations</p>
+    <img src="../../../assets/images/add-icon.svg" alt="add-icon" (click)="showModal=true">
+  </div>
+  <div class="cards">
+
+    <div class="card">
+      <div class="licences">
+        <h6>350</h6>
+        <p>Licenses</p>
+      </div>
+      <div class="area">
+        <img src="../../../assets/images/mountain-icon.svg" alt="mountain-icon">
+        <h6>Maslak</h6>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="licences">
+        <h6>350</h6>
+        <p>Licenses</p>
+      </div>
+      <div class="area">
+        <img src="../../../assets/images/brush-icon.svg" alt="mountain-icon">
+        <h6>Kadıköy</h6>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="licences">
+        <h6>350</h6>
+        <p>Licenses</p>
+      </div>
+      <div class="area">
+        <img src="../../../assets/images/joystick-icon.svg" alt="mountain-icon">
+        <h6>Besiktas</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+<app-add-location-modal (close)="onCloseModal($event)" *ngIf="showModal"></app-add-location-modal>

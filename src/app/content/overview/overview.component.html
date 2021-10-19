@@ -1,0 +1,14 @@
+<div class="container">
+
+  <div class="left-wrapper">
+    <app-card (toggle)="toggle()" [cardData]="data?.cards"></app-card>
+    <app-billing-summary [billingData]="data?.billing"></app-billing-summary>
+  </div>
+
+  <div class="right-wrapper">
+    <app-locations-sum></app-locations-sum>
+    <app-module-usage [usageData]="data?.usage" [billingData]="data?.billing"></app-module-usage>
+    <app-administrators [administrators]="data?.administrators"></app-administrators>
+  </div>
+
+</div>

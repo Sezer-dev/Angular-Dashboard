@@ -1,0 +1,74 @@
+@import "../../../assets/scss/variables.scss";
+
+.wrapper {
+    border-radius: 28px;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    width: 1151px;
+    height: 510px;
+    padding: 20px 30px;
+    font-size: 14px;
+
+    .container {
+        color: $text-secondary;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            thead {
+                color: $text-secondary;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: justify;
+                th:nth-child(1) {
+                    width: 372px;
+                }
+                th:nth-child(2) {
+                    width: 219px;
+                }
+                th:nth-child(4) {
+                    text-align: end;
+                    width: 341px;
+                }
+            }
+            tbody {
+                tr {
+                    border-bottom: 0.5px solid #ececec;
+                    &:nth-child(1) td {
+                        padding-top: 34px;
+                    }
+                    &:nth-last-child(1) {
+                        border: 0px;
+                    }
+                }
+
+                td {
+                    padding-top: 7px;
+                    padding-bottom: 3px;
+                    &:nth-child(1) {
+                        padding-left: 6px;
+                        color: $text-primary;
+                        div:nth-child(1) {
+                            background-color: #efefef;
+                            width: 41.46px;
+                            height: 39px;
+                            border-radius: 5px;
+                            padding: 6px;
+                            display: inline-block;
+                            margin-right: 17px;
+                            img {
+                                object-fit: contain;
+                                vertical-align: middle;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                    &:nth-child(4) {
+                        text-align: end;
+                        img {
+                            padding-left: 5.42px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="header">
+    <h1>{{data?.header}}</h1><button *ngIf="data?.canAdd" (click)="showModal = true"><img src="./assets/images/plus-circle.svg"></button>
+    <p>{{data?.description}}</p>
+  </div>
+
+  <div class="icons">
+    <img class="inbox" src="../../assets/images/inbox.svg" alt="">
+    <div class="notification-container">
+      <img class="notifications" src="../../assets/images/notification-bell.svg" alt="">
+      <span></span>
+    </div>
+
+    <div class="avatar-container">
+      <img class="avatar" src="../../assets/images/avatar.svg" alt="">
+      <div class="user-info">
+        <h6>Andrew</h6>
+        <p>Admin Account</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-add-location-modal (close)="onCloseModal($event)" *ngIf="showModal"></app-add-location-modal>

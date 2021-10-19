@@ -1,0 +1,86 @@
+<div class="cards">
+  <h6 class="title">Cards</h6>
+
+  <div class="card-container">
+    <div class="card-wrapper">
+
+      <div class="card">
+        <div class="card-title">
+          <h6>{{cardData?.primaryCard.bank}}</h6>
+          <p>{{cardData?.primaryCard.type}}</p>
+        </div>
+
+        <div class="card-number">
+          <ng-template ngFor let-number [ngForOf]="cardData?.primaryCard.number.split(' ')">
+            <p>{{number}}</p>
+          </ng-template>
+        </div>
+
+        <div class="card-footer">
+          <span>
+            <h6>Card holder</h6>
+            <p>{{cardData?.primaryCard.name}}</p>
+          </span>
+          <span>
+            <h6>Expire date</h6>
+            <p>{{cardData?.primaryCard.expiry}}</p>
+          </span>
+        </div>
+        <img class="card-background" src="../../../assets/images/card-background.svg" alt="card-background">
+      </div>
+
+      <div class="expense">
+
+        <div class="bar">
+          <div class="filled-bar"
+            [ngStyle]="{'width': cardData?.expense.current / cardData?.expense.limit * 100 + '%' }">
+          </div>
+        </div>
+
+        <div class="limit">
+          <p>Expense limit</p>
+          <span>${{cardData?.expense.current}} / ${{cardData?.expense.limit}}</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="vertical-line"></div>
+
+    <div class="balance-wrapper">
+
+      <div class="balance-container">
+        <div class="amount">
+          <span>$</span>
+          <h6>{{cardData?.balance.current}}</h6>
+        </div>
+        <p>Current balance</p>
+      </div>
+
+      <div class="credit-container">
+        <div class="amount">
+          <span>$</span>
+          <h6>{{cardData?.balance.credit}}</h6>
+        </div>
+        <p>Available credit</p>
+      </div>
+
+      <div class="provisions-container">
+        <div class="amount">
+          <span>$</span>
+          <h6>{{cardData?.balance.provisions}}</h6>
+        </div>
+        <p>Awaiting provisions</p>
+      </div>
+
+      <div class="status">
+        <div class="switch-button" (click)="switchStatus($event)"
+          [ngStyle]="{'backgroundColor': cardData?.primaryCard.active ? '#197BBD' : '#EBEBEB'}">
+          <div class="circle" [ngStyle]="{'right': cardData?.primaryCard.active ? '0' : 'auto'}"></div>
+        </div>
+        <p *ngIf="!cardData?.primaryCard.active">Deactive Card</p>
+        <p *ngIf="cardData?.primaryCard.active">Active Card</p>
+      </div>
+    </div>
+  </div>
+</div>

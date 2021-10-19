@@ -1,0 +1,59 @@
+.module-usage {
+  margin-bottom: 10px;
+  table {
+    margin: 10px;
+    th {
+      font-weight: 500;
+      font-size: 20.11px;
+      font-style: normal;
+      line-height: 25px;
+      padding-bottom: 25px;
+      white-space: nowrap;
+      text-align: left;
+    }
+    td {
+      padding-bottom: 19.88px;
+      &:nth-child(1) {
+        padding-right: 15.17px;
+        width: 45px;
+      }
+      &:nth-child(2) {
+        width: 367.74px;
+      }
+      &:nth-child(3) {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 23.9789px;
+        line-height: 29px;
+        text-align: right;
+        color: #696969;
+        padding-left: 15.25px;
+        vertical-align: baseline;
+      }
+      .bar {
+        position: relative;
+        height: 10px;
+        width: 100%;
+        border-radius: 10.7766px;
+        background-color: #f1f1f1;
+        margin-bottom: 11px;
+
+        .filled-bar {
+          position: absolute;
+          border-radius: 10.7766px;
+          height: 10px;
+          &.filled-bar-exam {
+            background: linear-gradient(270deg, #fcae73 0%, #f79042 99.18%);
+          }
+          &.filled-bar-monitoring {
+            background: linear-gradient(90deg, #209d43 0%, #2bc255 100%);
+          }
+          &.filled-bar-application-library {
+            background: #70a6e8;
+          }
+        }
+      }
+    }
+  }
+}

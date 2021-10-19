@@ -1,0 +1,125 @@
+@import "../../../../assets/scss/variables.scss";
+
+
+
+.modal-overlay {
+  z-index: 1000;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+
+  .modal {
+    background-color: #fff;
+    width: 500px;
+    border-radius: 8px;
+
+    .modal-header {
+      border-bottom: 1px solid #F8F8F8;
+      position: relative;
+      padding: 11px 18px;
+      width: 100%;
+
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      span {
+        position: absolute;
+        top: 7px;
+        right: 14px;
+        cursor: pointer;
+        padding: 4px;
+      }
+    }
+
+    .modal-body {
+      width: 100%;
+      padding: 16px 48px;
+
+      div {
+        margin-bottom: 8px;
+
+        label {
+          display: block;
+          margin-bottom: 8px;
+        }
+
+        input {
+          display: block;
+          height: 36px;
+          font-family: 'Lato';
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 22px;
+          color: $text-primary;
+          padding: 8px;
+          border-radius: 8px;
+          border: 1px solid #197BBD;
+
+
+
+          &::placeholder {
+            color: #C7C7C7;
+            font-size: 14px;
+          }
+        }
+
+        #fileInput {
+          display: none;
+        }
+      }
+
+      .checkbox-container {
+        margin-top: 24px;
+
+        div {
+          display: inline-block;
+
+          label {
+            display: inline;
+            margin-right: 8px;
+          }
+
+          input {
+            display: inline;
+            vertical-align: middle;
+            margin-right: 8px;
+            width: 16px;
+          }
+        }
+      }
+    }
+
+    .modal-footer {
+      width: 100%;
+      border-bottom: 1px solid #F8F8F8;
+      text-align: right;
+      padding: 16px;
+
+      button:first-child {
+        background-color: $btn-light;
+        color: #197BBD;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+        margin-right: 16px;
+      }
+
+      button:last-child {
+        background-color: $btn-primary;
+        color: #fff;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+      }
+    }
+  }
+
+}

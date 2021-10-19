@@ -1,0 +1,64 @@
+@import "../../../../../assets/scss/variables.scss";
+
+.locations {
+  margin-bottom: 10px;
+  padding: 10px;
+
+  .title {
+    margin-bottom: 25px;
+
+    p {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: text-bottom;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+
+
+    .card {
+      box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+      border-radius: 28px;
+      width: 158px;
+      padding: 21px 25px;
+
+      .licences {
+        h6 {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 17px;
+          color: $text-secondary;
+        }
+      }
+
+      .area {
+        margin-top: 26px;
+
+        // img {}
+
+        h6 {
+          color: $text-primary;
+          font-size: 20px;
+          line-height: 25px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
